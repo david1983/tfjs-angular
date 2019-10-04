@@ -1,7 +1,15 @@
-<h1>Custom tfjs model</h1>
+<h1>Transfer learning</h1>
+<p>
+  Using transfer learning you can re-use pretrained model in a different context
+</p>
 <div>
     <video src="assets/montevideo/video.mp4" autoplay controls id="img-custom"></video>
     <div>
+      <p>
+        Using the buttons below you can adjust the prediction layer
+        of the neural network. weights will be saved in the localStorage.
+      </p>
+
         <div *ngFor="let c of classes;let k = index">
             <button (click)="addSnapshot(c)">ADD IMAGE</button>
           {{k}} - {{c}} 
