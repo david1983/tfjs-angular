@@ -11,7 +11,7 @@ import knnmodel from "./knn"
 })
 
 export class CustomModelComponent implements OnInit {
-  net: mobilenet.MobileNet
+  net: any
   clf: knnClassifier.KNNClassifier
   imgEl: any
   inputClass = ""
@@ -38,9 +38,7 @@ export class CustomModelComponent implements OnInit {
     this.clf = knnClassifier.create();
 
     // Make a prediction through the model on our image.
-    this.imgEl = document.getElementById('img-custom');
-    const result = await this.net.classify(this.imgEl);
-    // localStorage.setItem("myData", "");
+    this.imgEl = document.getElementById('img-custom');        
     if (!this.load()) {
       this.loadJson(knnmodel)
       // this.classes.forEach(c => {
@@ -60,7 +58,7 @@ export class CustomModelComponent implements OnInit {
     this.inputClass = ""
   }
 
-  addExample(classId, img) {
+  addExample(classId, img) {    
     const activation = this.net.infer(img, "conv_preds");
     this.clf.addExample(activation, classId);
   }
