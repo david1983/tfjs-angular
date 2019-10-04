@@ -1,0 +1,19 @@
+<h1>Custom tfjs model</h1>
+<div>
+    <video src="assets/montevideo/video.mp4" autoplay controls id="img-custom"></video>
+    <div>
+        <div *ngFor="let c of classes;let k = index">
+            <button (click)="addSnapshot(c)">ADD IMAGE</button>
+          {{k}} - {{c}} 
+          
+        </div>
+      </div>
+</div>
+
+<div *ngIf="predictions">
+  <h2>Prediction: {{pred}}</h2>
+
+  <h3>Confidences</h3>
+  <h3 *ngFor="let c of predictions.confidences | keyvalue">{{c.key}}:{{c.value}}</h3>
+</div>
+

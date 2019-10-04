@@ -13,12 +13,12 @@ export class Ml5ImageClassificationComponent implements OnInit {
   ) { }
 
   public nextImage(){
-    this.imageClf.nextImage()    
+    this.imageClf.nextImage()
   }
 
   ngOnInit() {
-    const iamgeElem = document.getElementById("ml5-image")
-    this.imageClf.classify(iamgeElem)
+    const imageElem = document.getElementById("ml5-image")
+    this.imageClf.classify(imageElem)
   }
 
 }

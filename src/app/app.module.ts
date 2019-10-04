@@ -12,6 +12,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import {DemoMaterialModule} from './material-module';
 import { Ml5ImageClassificationComponent } from './ml5-image-classification/ml5-image-classification.component';
 import { Ml5VideoClassificationComponent } from './ml5-video-classification/ml5-video-classification.component';
+import { CustomModelComponent } from './custom-model/custom-model.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Ml5VideoClassificationComponent } from './ml5-video-classification/ml5-
     ToxicComponent,
     ToolbarComponent,
     Ml5ImageClassificationComponent,
-    Ml5VideoClassificationComponent
+    Ml5VideoClassificationComponent,
+    CustomModelComponent
   ],
   imports: [
     MatNativeDateModule,
