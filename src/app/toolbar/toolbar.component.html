@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  
+<div>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button routerLink="/"  mat-menu-item>Home</button>
+    <button  routerLink="/tensors" mat-menu-item>Tensors</button>
+    <button  routerLink="/fit" mat-menu-item>Fit a curve</button>
+    <button  routerLink="/toxic" mat-menu-item>Toxicity</button>
+    <button  routerLink="/ml5/image-clf" mat-menu-item>Ml5 Image Classifier</button>
+    <button  routerLink="/ml5/video-clf" mat-menu-item>Ml5 Video Classifier</button>
+  </mat-menu>
+</div>
+
+</mat-toolbar>

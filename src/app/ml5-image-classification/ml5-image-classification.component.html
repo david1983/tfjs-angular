@@ -1,0 +1,12 @@
+<h1>ML5.js ImageClassifier</h1>
+<div>
+  <div>
+    <button (click)="nextImage()">Next</button>
+  </div>
+  <div class="clf-container">
+    <img id="ml5-image" [src]="imageClf.imageUrl" />
+    <div>
+        <h2 *ngFor="let pred of imageClf.predictions">{{pred.probability}}% - {{pred.className}}</h2>
+    </div>    
+  </div>
+</div>

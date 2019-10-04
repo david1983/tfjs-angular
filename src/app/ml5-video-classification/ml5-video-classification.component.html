@@ -1,0 +1,9 @@
+<h1>ML5.js VideoClassifier</h1>
+<div>  
+  <div class="clf-container">
+    <video id="ml5-video" src="assets/videoplayback.mp4" autoplay audio="false"></video>
+    <div>
+        <h2 *ngFor="let pred of imageClf.predictions">{{pred.probability}}% - {{pred.className}}</h2>
+    </div>    
+  </div>
+</div>
