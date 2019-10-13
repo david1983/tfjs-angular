@@ -1,0 +1,34 @@
+<h1>Transfer learning - from webcam</h1>
+<p>
+  Using transfer learning we can recognize if we have a mate or a thermo
+</p>
+<div class="video-container">
+  <div>
+    <video
+      autoplay
+      controls
+      id="img-custom"
+    ></video>
+  </div>
+
+  <div style="padding:1em">
+    <div *ngIf="predictions">
+      <h2>Prediction: {{ pred }}</h2>
+      <h3>Confidences</h3>
+      <h3 *ngFor="let c of predictions.confidences | keyvalue">
+        {{ c.key }}:{{ c.value }}
+      </h3>
+    </div>
+
+    <div>
+      <p>
+        Using the buttons below you can adjust the prediction layer. <br />
+      </p>
+
+      <div *ngFor="let c of classes; let k = index">
+        <button (click)="addSnapshot(c)">ADD IMAGE</button>
+        {{ k }} - {{ c }}
+      </div>
+    </div>
+  </div>
+</div>

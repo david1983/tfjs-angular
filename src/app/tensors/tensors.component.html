@@ -1,10 +1,31 @@
 <h1>Tensorflow.js - Basics</h1>
 <div>
     <h2>Scalars, Vectors, Matrices, Tensors</h2>
+    <p>
+        Scalars, Vectors, Matrices and Tensors are the building blocks of
+        Neural Networks.
+        Actually they are all tensors, just with a rank less than 3
+    </p>
+    <pre>
+        Example:
+
+        A Scalar is a Tensor of rank 0
+        A Vector is a Tensor of rank 1
+        A Matrix is a Tensor of rank 2
+    </pre>
+
     <img src="assets/tensors.jpg"/>
     <pre>
         <code class="javascript">
-            const tensor = tf.tensor([[1,2,3]])
+            const vector = tf.tensor([1,2])
+            const matrix = tf.tensor([
+                [1,2],
+                [3,4]
+            ])
+            const tensor = tf.tensor([
+                [[1,2],[3,2]],
+                [[1,7],[5,4]]
+            ])
         </code>
     </pre>
 </div> 

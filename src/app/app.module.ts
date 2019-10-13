@@ -13,6 +13,7 @@ import {DemoMaterialModule} from './material-module';
 import { Ml5ImageClassificationComponent } from './ml5-image-classification/ml5-image-classification.component';
 import { Ml5VideoClassificationComponent } from './ml5-video-classification/ml5-video-classification.component';
 import { CustomModelComponent } from './custom-model/custom-model.component';
+import { WebcamComponent } from './webcam/webcam.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CustomModelComponent } from './custom-model/custom-model.component';
     ToolbarComponent,
     Ml5ImageClassificationComponent,
     Ml5VideoClassificationComponent,
-    CustomModelComponent
+    CustomModelComponent,
+    WebcamComponent
   ],
   imports: [
     MatNativeDateModule,

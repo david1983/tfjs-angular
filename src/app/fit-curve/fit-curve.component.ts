@@ -58,7 +58,6 @@ export class FitCurveComponent implements OnInit {
   ngAfterViewInit() {
     this.drawPlotly()
     this.tensorData = this.convertToTensor(this.x, this.y)
-    // this.train()
 
   }
 
@@ -129,9 +128,7 @@ export class FitCurveComponent implements OnInit {
     // intermediate tensors.
 
     return tf.tidy(() => {
-      // Step 1. Shuffle the data    
-
-
+ 
       // Step 2. Convert data to Tensor
       const inputs = x
       const labels = y

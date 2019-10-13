@@ -1,4 +1,51 @@
 <h1>Tensorflow.js - Fit a curve on data</h1>
+
+<pre>
+  Fitting a curve is one of the best exercise you can do to understand how a neural network works.
+
+  In this case we are using a Feed-Forward neural network
+  A Perceptron is the building block of a FFNN.  
+
+</pre>
+
+<img src="/assets/perceptron.png" width=600/>
+
+<pre>
+  the output of a perceptron is:
+
+  output = activation(sum(inputs*weights))
+</pre>
+
+<pre>
+  Activation is a function used to define the output of a neuron,
+  it could be on or off (linear), or it could be a probability (logistic)
+  common activation functions are:
+    - linear
+    - sigmoid
+    - tanh
+    - softmax
+    - rectified linear unit
+
+</pre>
+
+<pre>
+  During the training process the weights of the network are changed in order to match
+  the given result.
+  This process is called back-propagation and it is performed by the Optimizer
+  most common optimization technique is Stochastic Gradient Descent, 
+  where we tried to minimize the loss function.
+</pre>
+
+<pre>
+  The loss function indicates the error of the neural network.
+  There are different loss functions for different application
+  some of the common loss functions are:
+
+    Mean Squared error
+    Binary Crossentropy
+    Sparse Categorical Crossentropy
+</pre>
+
 <p>
   - Create a model using the button below.<br/>
   - Train the model for 100 iteration to see how it fits the data.<br/>
