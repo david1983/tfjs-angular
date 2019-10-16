@@ -105,21 +105,21 @@ export class ToxicComponent implements OnInit {
   
   inputValue=""  
   example = codeExample
-
+  classification = ""
   constructor(
+    private cdRef: ChangeDetectorRef, 
     private toxic: ToxicService,    
   ) { 
     this.inputValue = "";
     
   }
 
-  public onInputupdate(inputValue: string){
+  public async onInputupdate(inputValue: string){
     
     this.inputValue = inputValue;                
-    this.toxic.analyze(inputValue)
-      .then(result => {
-        console.log(result)
-      })
+    const result = await this.toxic.analyze(inputValue)
+    this.classification = this.toxic.classification
+    this.cdRef.detectChanges();
   }
 
   ngOnInit(){}

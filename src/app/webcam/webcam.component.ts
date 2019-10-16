@@ -17,7 +17,7 @@ export class WebcamComponent implements OnInit {
   pred
 
   classes = [
-    "Nothing",
+    "No detection",
     "Mate",
     "Thermos",
   ]

@@ -6,16 +6,18 @@
     </pre>
 
   <div>
+    <label>Write a comment below</label><br/>
     <input
       type="text"
       name="a"
+      placeholder="Write a comment here"
       [ngModel]="inputValue"
       (ngModelChange)="onInputupdate($event)"
     />
   </div>
 
   <h2>
-    {{ toxic.classification }}
+    {{ classification }}
   </h2>
 
   <div>

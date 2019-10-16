@@ -5,7 +5,7 @@
   </div>
   <div class="clf-container">
     <img id="ml5-image" [src]="imageClf.imageUrl" />
-    <div>
+    <div class="clf-preds">
         <h2 *ngFor="let pred of imageClf.predictions">{{pred.probability}}% - {{pred.className}}</h2>
     </div>    
   </div>

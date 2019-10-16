@@ -72,8 +72,9 @@ export class ToxicService {
     classification: string
   }>{
     if (!this.loaded) return Promise.reject("toxicity is not loaded")
+    console.log(inputValue)
     return this.tox
-      .classify(inputValue)
+      .classify(inputValue.trim())
       .then(predictions => {
         this.predictions = predictions
         const classification = predictions

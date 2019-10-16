@@ -5,7 +5,11 @@ video{
 .clf-container{
     display: flex;
     justify-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     animation: all 1s;
+}
+
+.clf-preds{
+    width:45%
 }
