@@ -16,7 +16,7 @@ export class Ml5VideoClassificationComponent implements OnInit {
    * on component mount start the classification of the video
    */
   ngOnInit() {
-    const video:any = document.getElementById("ml5-video")
+    const video:any = document.getElementById("ml5-video")    
     video.muted = true
     this.intervalId = setInterval(() => {
       // create a canvas to get a snapshot of the video

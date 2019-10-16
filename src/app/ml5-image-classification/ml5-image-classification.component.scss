@@ -1,5 +1,6 @@
 img{
-    width:50%
+    width:50%;
+    min-width: 300px
 }
 
 .clf-container{
@@ -8,6 +9,7 @@ img{
     justify-content: space-around;
     align-items: center;
     animation: all 1s;
+    flex-wrap: wrap;
 }
 
 .clf-preds{

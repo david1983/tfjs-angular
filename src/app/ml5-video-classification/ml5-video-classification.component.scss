@@ -1,5 +1,10 @@
-video{
-    width:50%
+.video-container{
+    max-width:50%;
+    min-width:300px;
+}
+
+.video-clf{
+    width:100%
 }
 
 .clf-container{
@@ -8,6 +13,8 @@ video{
     justify-content: space-between;
     align-items: center;
     animation: all 1s;
+
+    flex-wrap: wrap;
 }
 
 .clf-preds{
